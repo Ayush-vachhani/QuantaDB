@@ -9,7 +9,7 @@ pub fn read_nodes() -> io::Result<Vec<Node>> {
 
     let nodes: Vec<Node> = bincode::decode_from_std_read(&mut reader, config::standard())
         .map_err(|e| io::Error::new(io::ErrorKind::Other, e.to_string()))?;
-    println!("Total nodes read: {}", nodes.len());
+    // println!("Total nodes read: {}", nodes.len());
     // println!("{:?}", nodes);
     Ok(nodes)
 }
