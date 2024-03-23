@@ -19,11 +19,6 @@ pub fn create_quanta_db(files: &Vec<&str>) -> io::Result<()> {
     }
     Ok(())
 }
-pub fn clear_file(file_path: &str) -> Result<()> {
-    let _file = File::create(file_path)?;
-    println!("File cleared successfully.");
-    Ok(())
-}
 pub fn clear_files(files: Vec<&str>) -> Result<()> {
     for file in files {
         let _file = File::create(file)?;

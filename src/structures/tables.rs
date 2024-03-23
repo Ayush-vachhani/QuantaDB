@@ -19,3 +19,11 @@ pub struct Consumer {
     pub(crate) name: String,
     pub(crate) price: f32,
 }
+pub trait HasId {
+    fn id(&self) -> i32;
+}
+impl HasId for Producer {
+    fn id(&self) -> i32 {
+        self.id
+    }
+}
